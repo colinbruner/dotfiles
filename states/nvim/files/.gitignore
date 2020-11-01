@@ -1,6 +1,5 @@
-.DS_Store
-.salt/
 states/nvim/files/autoload
 states/nvim/files/plugged
 states/nvim/files/backups
+.DS_Store
 states/nvim/files/.netrwhist
