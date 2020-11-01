@@ -7,4 +7,5 @@ base:
     - tmux
     - nvim
     - utils
+    - slate
     - iterm

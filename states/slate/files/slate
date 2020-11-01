@@ -1,0 +1,25 @@
+config defaultToCurrentScreen true
+config nudgePercentOf screenSize
+config resizePercentOf screenSize
+
+alias hyper ctrl;alt
+
+# Nudge Bindings
+bind l:alt nudge +10% +0
+bind h:alt nudge -10% +0
+bind k:alt nudge +0   -10%
+bind j:alt nudge +0   +10%
+
+# Resize Bindings
+bind l:alt;shift  resize +10% +0
+bind h:alt;shift  resize -10% +0
+bind k:alt;shift  resize +0   -10%
+bind j:alt;shift  resize +0   +10%
+
+# Push Bindings
+bind l:${hyper} push right bar-resize:screenSizeX/3
+bind h:${hyper} push left  bar-resize:screenSizeX/3
+bind k:${hyper} push up    bar-resize:screenSizeY/2
+bind j:${hyper} push down  bar-resize:screenSizeY/2
+bind f:${hyper} throw 0 resize
+
