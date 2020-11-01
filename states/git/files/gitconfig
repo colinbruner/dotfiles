@@ -1,14 +1,14 @@
 [user]
 	name = Colin Bruner
 	email = colin.d.bruner@gmail.com
-        username = cbruner
+  username = colinbruner
 [pager]
 	branch = false
 [core]
 	editor = nvim
 [github]
-        user = colinbruner
+  user = colinbruner
 [alias]
-        co = checkout
-        b = branch
-        nb = checkout -b
+  co = checkout
+  b = branch
+  nb = checkout -b
