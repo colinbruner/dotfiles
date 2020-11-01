@@ -9,3 +9,4 @@ base:
     - utils
     - slate
     - iterm
+    - python
