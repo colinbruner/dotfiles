@@ -23,3 +23,11 @@ zsh-link-zsh.d:
     - name: {{ grains.homedir }}/.zsh.d
     - target: {{ grains.statesdir}}/zsh/files/zsh.d
     - force: true
+
+zsh-link-sheldon-config:
+  file.symlink:
+    - name: {{ grains.homedir }}/.sheldon/plugins.toml
+    - target: {{ grains.statesdir}}/sheldon/files/sheldon.toml
+    - makedirs: true
+    - force: true
+
