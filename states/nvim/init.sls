@@ -8,4 +8,5 @@ nvim-link:
   file.symlink:
     - name: {{ grains.configdir }}/nvim
     - target: {{ grains.statesdir}}/nvim/files
+    - makedirs: true
     - force: true
