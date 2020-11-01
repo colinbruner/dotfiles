@@ -14,8 +14,8 @@ $ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/inst
 $ brew install salt
 ```
 
-## Dotfile Directory Position
-This checked out directory is expected to be checked out in $HOME/git/dotfiles, 
+## Dotfile Directory Location
+This checked out directory is expected to be checked out in `$HOME/git/dotfiles`, 
 which is required for the Salt grain `statesdir`.
 
 # Bootstrapping
