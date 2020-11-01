@@ -6,8 +6,6 @@
 	branch = false
 [core]
 	editor = nvim
-[github]
-  user = colinbruner
 [alias]
   co = checkout
   b = branch
