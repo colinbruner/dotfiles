@@ -1,7 +1,7 @@
 # Dotfiles
 This is a collection of my personal dotfiles.
 
-# Prerequisites
+# Setup
 The following are required to run any state or bootstrap a new system
 
 ## Homebrew
@@ -13,6 +13,10 @@ $ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/inst
 ```bash
 $ brew install salt
 ```
+
+## Dotfile Directory Position
+This checked out directory is expected to be checked out in $HOME/git/dotfiles, 
+which is required for the Salt grain `statesdir`.
 
 # Bootstrapping
 Begin by sourcing the local [environment.sh](./environment.sh) file to set the `sc` alias and sync
@@ -37,5 +41,5 @@ Bootstrap the entire system with the following...
 $ sc state.highstate
 ```
 
-# Thanks
+# Credits
 Much of this taken from [casperstorm/dotfiles](https://github.com/casperstorm/dotfiles), thanks!
