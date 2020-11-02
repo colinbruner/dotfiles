@@ -15,6 +15,8 @@ fi
 #alias tmux="env TERM=xterm-256color tmux"
 alias tmux='tmux -2'
 
+alias dfs='cd ~/git/dotfiles'
+
 # copy pubkey
 alias pubkey="cat ~/.ssh/id_rsa.pub | pbcopy | echo '=> Public key copied to pasteboard.'"
 

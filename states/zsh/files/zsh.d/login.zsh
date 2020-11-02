@@ -33,9 +33,7 @@ fi
 
 # GPG
 [ -f ~/.gpg-agent-info ] && source ~/.gpg-agent-info
-if [ -S "${GPG_AGENT_INFO%%:*}" ]; then
-   export GPG_AGENT_INFO
-else
-   eval $( gpg-agent --daemon )
-fi
-
+## Export GPG_AGENT_INFO socket file
+[ -S "${GPG_AGENT_INFO%%:*}" ] && export GPG_AGENT_INFO
+## Start Agent
+[[ $(pgrep gpg-agent) ]] || eval $( gpg-agent --daemon )
