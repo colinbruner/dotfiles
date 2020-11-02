@@ -4,3 +4,7 @@ cachedir: cachedir/
 log_file: log/minion
 
 file_client: local
+
+# https://docs.saltstack.com/en/latest/ref/configuration/minion.html#enable-fqdns-grains
+# Stops `salt-call` on OSX from trying to resolve the local fe80 v6 addresses, cuts runtime by 6-10secs
+enable_fqdns_grains: false

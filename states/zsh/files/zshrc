@@ -29,6 +29,7 @@ source $HOME/.zsh.d/aliases.zsh
 source $HOME/.zsh.d/funcs.zsh
 source $HOME/.zsh.d/exports.zsh
 # Code Related Files
+source $HOME/.zsh.d/asdf.zsh
 source $HOME/.zsh.d/python.zsh
 source $HOME/.zsh.d/go.zsh
 source $HOME/.zsh.d/rust.zsh
