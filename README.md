@@ -6,7 +6,8 @@ The following are required to run any state or bootstrap a new system
 
 ## Homebrew
 ```bash
-$ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+# https://brew.sh/
+$ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 ```
 
 ## SaltStack
@@ -14,7 +15,7 @@ $ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/inst
 $ brew install salt
 ```
 
-## Dotfile Directory Location
+## Dotfiles Directory Location - IMPORTANT
 This checked out directory is expected to be checked out in `$HOME/git/dotfiles`, 
 which is required for the Salt grain `statesdir`.
 

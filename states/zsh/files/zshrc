@@ -1,8 +1,8 @@
 # .zshrc
 #
-#########
-# Init! #
-#########
+########
+# Init #
+########
 
 # Login Scripts
 source $HOME/.zsh.d/login.zsh
@@ -10,11 +10,11 @@ source $HOME/.zsh.d/login.zsh
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+if [[ -r "${HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-# ohmyzsh specifics - should come before sheldon.
+# oh-my-zsh specifics - must come before sheldon source.
 export ZSH="$HOME/.sheldon/repos/github.com/ohmyzsh/ohmyzsh"
 plugins=(git osx)
 
@@ -23,9 +23,9 @@ plugins=(git osx)
 ################
 source <(sheldon source)
 
-############################
-## Load Additional Filesb #
-############################
+##########################
+## Load Additional Files #
+##########################
 # Generic System Things/Improvements/Preferences
 source $HOME/.zsh.d/system.zsh
 source $HOME/.zsh.d/aliases.zsh

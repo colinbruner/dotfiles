@@ -1,37 +1,42 @@
-#rite-env-file login.zsh
+# login.zsh
 
 ##################
 ## Login Scripts #
 ##################
+function _startSSHAgent {
+  echo ${1:-"Starting ssh-agent"}
+  eval $(ssh-agent -s | tee ~/.ssh/environment)
+  for key in $HOME/.ssh/id_rsa*; do if [[ $key != *"pub" ]]; then ssh-add $key; fi; done
+}
+
+#######
+# SSH #
+#######
 # Check to see if agent is running, 1 for no identities added, 0 for identities added
 ssh-add -l &>/dev/null 
 if [[ $? != 0 ]]; then
-    # Automatically start SSH Agent on boot when no previous .agent.env file is found
-    if [[ -f ~/.agent.env ]]; then
-        . ~/.agent.env > /dev/null
-        if ! kill -0 $SSH_AGENT_PID > /dev/null 2>&1; then
-            echo "Stale agent file found. Spawning new agent… "
-            eval `ssh-agent | tee ~/.agent.env`
-            ssh-add
-            for key in $HOME/.ssh/id_rsa*; do if [[ $key != *"pub" ]]; then ssh-add $key; fi; done
-        fi
+    # Source ssh-agent environment file
+    if [ -f ~/.ssh/environment ]; then 
+      # Source current ssh-agent environment, then check for staleness
+      source ~/.ssh/environment >/dev/null
+      if ! kill -0 $SSH_AGENT_PID &>/dev/null; then
+          _startSSHAgent "Stale agent file found. Spawning new agent… "
+      fi
     else
-        echo "Starting ssh-agent"
-        eval `ssh-agent | tee ~/.agent.env`
-        ssh-add > /dev/null 2>&1
-        for key in $HOME/.ssh/id_rsa*; do if [[ $key != *"pub" ]]; then ssh-add $key; fi; done
+      # Start SSH Agent if a ssh-agent environment file is not found.
+        _startSSHAgent
     fi
 fi
 
 # Predictable SSH authentication socket location.
-SOCK="/tmp/ssh-agent-$USER-screen"
-if test $SSH_AUTH_SOCK && [ $SSH_AUTH_SOCK != $SOCK ];then
-    rm -f /tmp/ssh-agent-$USER-screen
-    ln -sf $SSH_AUTH_SOCK $SOCK
-    export SSH_AUTH_SOCK=$SOCK
+if [[ -S "$SSH_AUTH_SOCK" && ! -h "$SSH_AUTH_SOCK" ]]; then
+    ln -sf $SSH_AUTH_SOCK ~/.ssh/ssh_auth_socket
+    export SSH_AUTH_SOCK=~/.ssh/ssh_auth_socket
 fi
 
-# GPG
+#######
+# GPG #
+#######
 [ -f ~/.gpg-agent-info ] && source ~/.gpg-agent-info
 ## Export GPG_AGENT_INFO socket file
 [ -S "${GPG_AGENT_INFO%%:*}" ] && export GPG_AGENT_INFO

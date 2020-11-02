@@ -17,3 +17,9 @@ python-install-pyenv:
       - brew install pyenv
     - unless: brew list pyenv
 
+python-install-pyenv-virtualenv:
+  cmd.run:
+    - names:
+      - brew install pyenv-virtualenv
+    - unless: brew list pyenv-virtualenv
+

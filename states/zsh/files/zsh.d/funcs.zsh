@@ -26,8 +26,7 @@ function gpg_import_privkey () {
 
 function gpg_print_pubkey () {
     gpg --armor --export colin.d.bruner@gmail.com | tee pubkey.asc
-    echo
-    echo "Saved output as `pwd`/pubkey.asc"
+    echo -e "\nSaved output as `pwd`/pubkey.asc"
 
 }
 
@@ -151,8 +150,3 @@ if [ -n "$TMUX" ]; then
 else                                                                                                  
   function refresh { }                                                                              
 fi
-
-# https://gist.github.com/admackin/4507371
-function _ssh_auth_save() {
-    ln -sf "$SSH_AUTH_SOCK" "$HOME/.ssh/ssh-auth-sock.$HOSTNAME"
-}

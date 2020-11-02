@@ -24,7 +24,3 @@ alias pubkey="cat ~/.ssh/id_rsa.pub | pbcopy | echo '=> Public key copied to pas
 alias grepnc='grep -v "^$\|^#"'
 alias startssh='eval `ssh-agent -s` && ssh-add'
 
-# https://gist.github.com/admackin/4507371
-alias screen='_ssh_auth_save ; export HOSTNAME=$(hostname) ; screen'
-alias tmux='_ssh_auth_save ; export HOSTNAME=$(hostname) ; tmux'
-#alias tmux="TERM=screen-256color-bce tmux"

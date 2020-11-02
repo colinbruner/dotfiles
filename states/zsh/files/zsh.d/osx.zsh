@@ -12,9 +12,7 @@ export X11_PREFS_DOMAIN="org.macosforge.xquartz.X11"
 [[ -e $HOME/.iterm2_shell_integration.zsh ]] && source $HOME/.iterm2_shell_integration.zsh
 
 #Required for OSX Brew OpenSSH
-export SSH_AUTH_SOCK=$(launchctl getenv SSH_AUTH_SOCK)
-HOMEBREW_DIR=/usr/local/homebrew
-
+export HOMEBREW_DIR=/usr/local/homebrew
 export HOMEBREW_GITHUB_API_TOKEN=''
 export HOMEBREW_CASK_OPTS="--appdir=~/Applications --caskroom=/opt/homebrew-cask/Caskroom"
 export HOMEBREW_NO_ANALYTICS=1
