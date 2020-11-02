@@ -4,6 +4,9 @@
 # Init! #
 #########
 
+# Login Scripts
+source $HOME/.zsh.d/login.zsh
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -35,7 +38,9 @@ source $HOME/.zsh.d/go.zsh
 source $HOME/.zsh.d/rust.zsh
 # OSX Specifics
 source $HOME/.zsh.d/osx.zsh
-# Login Scripts
-source $HOME/.zsh.d/login.zsh
 
+# powerlevel10k
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+# asdf - https://asdf-vm.com/#/core-manage-asdf?id=having-issues
+[[ ! -f ~/.asdf/asdf.sh ]] || source ~/.asdf/asdf.sh
+[[ ! -f ~/.asdf/completions/asdf.bash ]] || source ~/.asdf/completions/asdf.bash
