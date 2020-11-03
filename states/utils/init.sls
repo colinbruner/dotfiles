@@ -27,3 +27,9 @@ utils-install-fd:
     - names:
       - brew install fd
     - unless: brew list fd
+
+utils-install-git-crypt:
+  cmd.run:
+    - names:
+      - brew install git-crypt
+    - unless: brew list git-crypt
