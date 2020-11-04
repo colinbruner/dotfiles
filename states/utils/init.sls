@@ -28,6 +28,12 @@ utils-install-fd:
       - brew install fd
     - unless: brew list fd
 
+utils-install-htop:
+  cmd.run:
+    - names:
+      - brew install htop
+    - unless: brew list htop
+
 utils-install-git-crypt:
   cmd.run:
     - names:
