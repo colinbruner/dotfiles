@@ -15,3 +15,15 @@ utils-work-install-postgresql:
     - names:
       - brew install postgresql
     - unless: brew list postgresql
+
+utils-work-install-imagemagick:
+  cmd.run:
+    - names:
+      - brew install imagemagick
+    - unless: brew list imagemagick
+
+utils-work-install-cmake:
+  cmd.run:
+    - names:
+      - brew install cmake
+    - unless: brew list cmake
