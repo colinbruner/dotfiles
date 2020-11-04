@@ -13,6 +13,7 @@ alias v='workon'
 alias v.deactivate='deactivate'
 alias v.mk='mkvirtualenv -p python3'
 alias v.mk2='mkvirtualenv -p python2'
+alias v.rm='rmvirtualenv'
 
 alias py='ipython'
 alias py2='ipython2'

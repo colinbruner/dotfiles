@@ -8,3 +8,5 @@ export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
 # the following to ~/.zshrc:
 eval "$(rbenv init -)"
 export PATH="$HOME/.rbenv/bin:$PATH"
+
+alias be="bundle exec"
