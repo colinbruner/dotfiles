@@ -37,3 +37,14 @@ asdf-terraform:
       - asdf which terraform
     - require:
       - cmd: asdf-install
+
+asdf-packer:
+  cmd.run:
+    - names:
+      - asdf plugin-add packer
+      - asdf install packer $(asdf latest packer)
+      - asdf global packer $(asdf latest packer)
+    - unless:
+      - asdf which packer
+    - require:
+      - cmd: asdf-install

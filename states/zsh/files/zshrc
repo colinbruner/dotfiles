@@ -33,6 +33,7 @@ source $HOME/.zsh.d/funcs.zsh
 source $HOME/.zsh.d/exports.zsh
 # Code Related Files
 source $HOME/.zsh.d/python.zsh
+source $HOME/.zsh.d/ruby.zsh
 source $HOME/.zsh.d/go.zsh
 source $HOME/.zsh.d/rust.zsh
 # OSX Specifics
