@@ -12,10 +12,11 @@ if [[ -x $(which nvim) ]]; then
 fi
 
 # fix tmux colors
-#alias tmux="env TERM=xterm-256color tmux"
 alias tmux='tmux -2'
 
+# Laziness Shortcuts
 alias dfs='cd ~/git/dotfiles'
+alias idme='cd ~/git/idme'
 
 # copy pubkey
 alias pubkey="cat ~/.ssh/id_rsa.pub | pbcopy | echo '=> Public key copied to pasteboard.'"
@@ -23,4 +24,3 @@ alias pubkey="cat ~/.ssh/id_rsa.pub | pbcopy | echo '=> Public key copied to pas
 # util
 alias grepnc='grep -v "^$\|^#"'
 alias startssh='eval `ssh-agent -s` && ssh-add'
-
