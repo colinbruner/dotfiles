@@ -1,25 +1,6 @@
 
-python-install:
+ruby-install-rbenv:
   cmd.run:
     - names:
-      - brew install python3
-    - unless: brew list python3
-
-python-install-neovim:
-  cmd.run:
-    - names:
-      - pip3 install neovim
-    - unless: pip3 list | grep neovim
-
-python-install-pyenv:
-  cmd.run:
-    - names:
-      - brew install pyenv
-    - unless: brew list pyenv
-
-python-install-pyenv-virtualenv:
-  cmd.run:
-    - names:
-      - brew install pyenv-virtualenv
-    - unless: brew list pyenv-virtualenv
-
+      - brew install rbenv
+    - unless: brew list rbenv

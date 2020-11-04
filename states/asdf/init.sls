@@ -16,17 +16,6 @@ asdf-poetry:
     - require:
       - cmd: asdf-install
 
-asdf-ruby:
-  cmd.run:
-    - names:
-      - asdf plugin-add ruby
-      - asdf install ruby $(asdf latest ruby)
-      - asdf global ruby $(asdf latest ruby)
-    - unless:
-      - asdf which ruby
-    - require:
-      - cmd: asdf-install
-
 asdf-terraform:
   cmd.run:
     - names:
