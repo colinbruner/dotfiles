@@ -17,8 +17,8 @@ bind k:alt;shift  resize +0   -10%
 bind j:alt;shift  resize +0   +10%
 
 # Push Bindings
-bind l:${hyper} push right bar-resize:screenSizeX/3
-bind h:${hyper} push left  bar-resize:screenSizeX/3
+bind l:${hyper} push right bar-resize:screenSizeX/2
+bind h:${hyper} push left  bar-resize:screenSizeX/2
 bind k:${hyper} push up    bar-resize:screenSizeY/2
 bind j:${hyper} push down  bar-resize:screenSizeY/2
 bind f:${hyper} throw 0 resize

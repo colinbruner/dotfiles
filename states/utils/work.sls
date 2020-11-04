@@ -16,6 +16,12 @@ utils-work-install-postgresql:
       - brew install postgresql
     - unless: brew list postgresql
 
+utils-work-install-puma-dev:
+  cmd.run:
+    - names:
+      - brew install puma/puma/puma-dev
+    - unless: brew list puma-dev
+
 utils-work-install-imagemagick:
   cmd.run:
     - names:
