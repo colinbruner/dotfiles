@@ -34,6 +34,12 @@ utils-install-htop:
       - brew install htop
     - unless: brew list htop
 
+utils-install-coreutils:
+  cmd.run:
+    - names:
+      - brew install coreutils
+    - unless: brew list coreutils
+
 utils-install-git-crypt:
   cmd.run:
     - names:
