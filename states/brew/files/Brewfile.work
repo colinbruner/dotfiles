@@ -1,0 +1,8 @@
+
+brew "redis"
+brew "elasticsearch"
+brew "postgresql"
+brew "puma/puma/puma-dev"
+brew "imagemagick"
+brew "cmake"
+brew "pandoc"

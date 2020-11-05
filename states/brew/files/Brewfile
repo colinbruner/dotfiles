@@ -1,0 +1,13 @@
+
+brew "fzf"
+brew "z"
+# Replacement for file, 'fd' binary
+brew "fd"
+# Replacement for grep, 'rg' binary
+brew "ripgrep"
+# Provides GNU coreutils, but for Mac
+brew "coreutils"
+brew "gitcrypt"
+
+brew "htop"
+brew "gpg"
