@@ -3,10 +3,10 @@ base:
     - git
     - ssh
     - zsh
+    - brew
     - nvim
     - tmux
     - nvim
-    - utils
     - slate
     - iterm
     - python
