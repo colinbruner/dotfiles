@@ -7,7 +7,6 @@ brew "fd"
 brew "ripgrep"
 # Provides GNU coreutils, but for Mac
 brew "coreutils"
-brew "gitcrypt"
 
 brew "htop"
 brew "gpg"

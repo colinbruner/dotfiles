@@ -6,7 +6,7 @@ brew-install-brew:
     - unless: which brew &>/dev/null
 
 brew-copy-brewfile:
-  file.managed:
+  file.symlink:
     - name: {{ grains.homedir }}/.config/brew/Brewfile
     - target: {{ grains.statesdir}}/brew/files/Brewfile
     - makedirs: true

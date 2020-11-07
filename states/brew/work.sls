@@ -1,6 +1,6 @@
 
 brew-copy-brewfile.work:
-  file.managed:
+  file.symlink:
     - name: {{ grains.homedir }}/.config/brew/Brewfile.work
     - target: {{ grains.statesdir}}/brew/files/Brewfile.work
     - makedirs: true
