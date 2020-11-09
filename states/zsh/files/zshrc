@@ -1,10 +1,8 @@
 # .zshrc
 #
-########
-# Init #
-########
-
-# Login Scripts
+#################
+# Login Scripts #
+#################
 source $HOME/.zsh.d/login.zsh
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
@@ -14,9 +12,24 @@ if [[ -r "${HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-# oh-my-zsh specifics - must come before sheldon source.
+#############
+# oh-my-zsh #
+#############
+# NOTE: must come before sheldon source.
 export ZSH="$HOME/.sheldon/repos/github.com/ohmyzsh/ohmyzsh"
 plugins=(git osx)
+
+#############
+# ZSH Stuff #
+#############
+# Autoload completion scripts
+autoload -Uz compinit && compinit
+autoload -U promptinit; promptinit
+
+# Set list colors for ZSH
+zstyle ':completion:*' list-colors "=(#b) #([0-9]#)*=36=31"
+# Disable SSH host completion
+zstyle ':completion:*' hosts off
 
 ################
 # Load Plugins #

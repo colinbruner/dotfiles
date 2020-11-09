@@ -5,8 +5,15 @@ brew "z"
 brew "fd"
 # Replacement for grep, 'rg' binary
 brew "ripgrep"
-# Provides GNU coreutils, but for Mac
+# Install common utils
 brew "coreutils"
-
 brew "htop"
 brew "gpg"
+brew "jq"
+
+# Install heroku
+tap "heroku/brew"
+brew "heroku"
+
+# install yarn
+brew "yarn"

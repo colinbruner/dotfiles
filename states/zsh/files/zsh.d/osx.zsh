@@ -17,4 +17,5 @@ export HOMEBREW_GITHUB_API_TOKEN=''
 export HOMEBREW_CASK_OPTS="--appdir=~/Applications --caskroom=/opt/homebrew-cask/Caskroom"
 export HOMEBREW_NO_ANALYTICS=1
 
+# Pandoc
 export PATH="$PATH:/Library/TeX/texbin"
