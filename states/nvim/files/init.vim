@@ -49,11 +49,11 @@ filetype plugin on                                " Load filetype specific
     set completeopt-=preview                          " Disable completion preview.
     set splitright                                    " Open new split to the right.
     "set nohlsearch                                   " Disable highlight search.
-    set relativenumber!                               " Show relative line numbers.
+    "set relativenumber!                              " Show relative line numbers.
     set inccommand=nosplit                            " Preview substitutions.
     set copyindent                                    " Copy previous indent on <CR>.
     set fillchars+=vert:│                             " Nicer vsplit separator.
-    set number!                                       " On current line, show
+    " set number!                                     " On current line, show
                                                       " absolute line number.
 "}
 
@@ -162,7 +162,6 @@ filetype plugin on                                " Load filetype specific
         let g:go_fmt_command = "goimports"
      " }
 
-
      " NERDTree {
         " Automatically show NERDTree if no files are specified when
         " launching vim
@@ -170,6 +169,13 @@ filetype plugin on                                " Load filetype specific
         autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
         " Case-sensitive sorting
         let g:NERDTreeCaseSensitiveSort = 1
+     " }
+
+     " Vim-Terraform {
+        " Allow vim-terraform to align settings automatically with Tabularize.
+        let g:terraform_align=1
+        " Allow vim-terraform to automatically format *.tf and *.tfvars files with terraform fmt
+        let g:terraform_fmt_on_save=1
      " }
 "}
 

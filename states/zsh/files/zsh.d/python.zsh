@@ -1,4 +1,9 @@
 # python.zsh
+#
+
+PYTHON3_VERSION=3.9
+
+export PATH="$PATH:$HOME/Library/Python/$PYTHON3_VERSION/bin"
 
 # Disable the virtualenv prompt modifier
 export VIRTUAL_ENV_DISABLE_PROMPT=true 

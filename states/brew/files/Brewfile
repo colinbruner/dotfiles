@@ -1,5 +1,6 @@
-
+# fuzzy file finder
 brew "fzf"
+# make cd smarter
 brew "z"
 # Replacement for file, 'fd' binary
 brew "fd"
@@ -10,6 +11,8 @@ brew "coreutils"
 brew "htop"
 brew "gpg"
 brew "jq"
+brew "mtr"
+brew "asciinema"
 
 # Install heroku
 tap "heroku/brew"

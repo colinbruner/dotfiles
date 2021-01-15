@@ -51,5 +51,9 @@ Plug 'martinda/Jenkinsfile-vim-syntax'
 Plug 'ekalinin/dockerfile.vim'
 " Useful tools
 Plug 'w0rp/ale'
-"
+"Hashivim
+Plug 'hashivim/vim-terraform'
+"Ruby linter - rubocop
+Plug 'ngmy/vim-rubocop'
+
 call plug#end()
