@@ -123,8 +123,8 @@ filetype plugin on                                " Load filetype specific
         autocmd Filetype rust setl ts=4 sts=4 sw=4
 
         " Automatically trim EOL whitespace when editing ruby/erlang code
-        au FileType ruby autocmd BufWritePre * :%s/\s\+$//e
-        au FileType erlang autocmd BufWritePre * :%s/\s\+$//e
+        " au FileType ruby autocmd BufWritePre * :%s/\s\+$//e
+        " au FileType erlang autocmd BufWritePre * :%s/\s\+$//e
 
         " Jenkinsfile
         au BufNewFile,BufRead Jenkinsfile setf groovy

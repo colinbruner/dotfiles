@@ -16,10 +16,6 @@ alias tmux='tmux -2'
 
 # Laziness Shortcuts
 alias dfs='cd ~/git/dotfiles'
-alias idme='cd ~/git/idme'
-alias c='cd ~/git/idme/chef'
-alias mos='cd ~/git/idme/chef/mos'
-alias b='cd ~/git/idme/build/packinghouse'
 
 ## Git
 alias glg1="git log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all"

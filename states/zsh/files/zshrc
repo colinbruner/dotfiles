@@ -51,6 +51,9 @@ source $HOME/.zsh.d/go.zsh
 source $HOME/.zsh.d/rust.zsh
 # OSX Specifics
 source $HOME/.zsh.d/osx.zsh
+if [ -f $HOME/.zsh.d/work.zsh ]; then
+  source $HOME/.zsh.d/work.zsh
+fi
 
 # powerlevel10k
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

@@ -1,6 +1,10 @@
 .DS_Store
+# Generated
 .salt/
 states/nvim/files/autoload
 states/nvim/files/plugged
 states/nvim/files/backups
 states/nvim/files/.netrwhist
+
+# Work
+states/zsh/files/zsh.d/work.zsh

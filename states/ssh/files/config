@@ -9,3 +9,7 @@ ControlPath ~/.ssh/cm-%r@%h:%p
 ControlMaster auto
 ControlPersist 10m
 StrictHostKeyChecking no
+
+Include ~/.ssh/home_config
+Include ~/.ssh/work_config
+
