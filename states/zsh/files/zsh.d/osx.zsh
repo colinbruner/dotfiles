@@ -19,3 +19,9 @@ export HOMEBREW_NO_ANALYTICS=1
 
 # Pandoc
 export PATH="$PATH:/Library/TeX/texbin"
+
+# Increase File Descriptors
+ulimit -n 10240
+
+# Uncomment for Apple Silicon
+# eval "$(/opt/homebrew/bin/brew shellenv)"
