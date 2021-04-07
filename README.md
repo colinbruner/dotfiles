@@ -4,20 +4,14 @@ This is a collection of my personal dotfiles.
 # Setup
 The following are required to run any state or bootstrap a new system
 
-## Homebrew
-```bash
-# https://brew.sh/
-$ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
-```
-
 ## SaltStack
 ```bash
 $ brew install salt
 ```
 
 ## Dotfiles Directory Location - IMPORTANT
-This checked out directory is expected to be checked out in `$HOME/git/dotfiles`, 
-which is required for the Salt grain `statesdir`.
+This repo is expected to be checked out in `$HOME/git/dotfiles`. This specific directory location
+is required for the hardcoded Salt's grain `statesdir`.
 
 # Bootstrapping
 Begin by sourcing the local [environment.sh](./environment.sh) file to set the `sc` alias and sync

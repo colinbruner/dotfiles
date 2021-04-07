@@ -12,6 +12,8 @@ brew-copy-brewfile:
     - makedirs: true
     - force: true
 
+# This is NOT idempotent - will always execute and appear as "changes" even when nothing new is
+# installed from Brew.
 brew-install-pkgs:
   cmd.run:
     - names:
