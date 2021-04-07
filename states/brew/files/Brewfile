@@ -1,3 +1,49 @@
+###
+# AWS
+###
+brew "awscli"
+brew "saml2aws"
+
+###
+# Code
+###
+# Python
+brew "python@3.8"
+brew "python@3.9"
+brew "pyenv"
+# Go
+brew "pyenv"
+
+###
+# Git
+###
+brew "git"
+
+###
+# IAC
+###
+brew "terraform"
+brew "terraform-docs"
+brew "tflint"
+brew "tfsec"
+# DriftCTL - View drift between your infra
+brew "driftctl"
+
+###
+# ConfigMGMT
+###
+brew "ansible"
+brew "salt"
+
+###
+# Network
+###
+brew "mtr"
+brew "nmap"
+
+###
+# Utils
+###
 # fuzzy file finder
 brew "fzf"
 # make cd smarter
@@ -6,17 +52,25 @@ brew "z"
 brew "fd"
 # Replacement for grep, 'rg' binary
 brew "ripgrep"
+
+# API | JSON parsing
+brew "httpie"
+brew "jq"
+
 # Install common utils
 brew "coreutils"
 brew "htop"
 brew "gpg"
-brew "jq"
-brew "mtr"
+
+# Terminal Recorder
 brew "asciinema"
 
+###
+# Web
+###
 # Install heroku
 tap "heroku/brew"
 brew "heroku"
-
-# install yarn
+# Yarn | NPM
 brew "yarn"
+brew "npm"
