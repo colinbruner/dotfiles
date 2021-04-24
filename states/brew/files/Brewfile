@@ -15,6 +15,12 @@ brew "pyenv"
 brew "pyenv"
 
 ###
+# Editors
+###
+brew "nvim"
+cask "visual-studio-code"
+
+###
 # Git
 ###
 brew "git"
@@ -64,6 +70,14 @@ brew "gpg"
 
 # Terminal Recorder
 brew "asciinema"
+
+cask "diffmerge"
+
+###
+# Virtual
+###
+cask "virtualbox"
+cask "visual-studio-code"
 
 ###
 # Web
