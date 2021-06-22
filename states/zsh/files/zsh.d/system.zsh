@@ -1,7 +1,7 @@
 ##########
 # System #
 ##########
-USER_BIN="$HOME/.bin:$HOME/.local/bin"
+USER_BIN="$HOME/.bin:$HOME/.bin/aws:$HOME/.bin/work:$HOME/.local/bin"
 export PATH="/usr/local/bin:/usr/bin:/bin:/sbin:/usr/sbin"
 export PATH="${PATH}:${USER_BIN}"
 

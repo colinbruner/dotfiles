@@ -119,7 +119,7 @@ filetype plugin on                                " Load filetype specific
         au FileType javascript setl sw=2 sts=2 et
         au FileType python set ts=4 sts=4 sw=4
         au FileType ruby set ts=2 sts=4 sw=2
-        autocmd Filetype go setl ts=8 sts=8 sw=8
+        autocmd Filetype go setl ts=4 sts=4 sw=4
         autocmd Filetype rust setl ts=4 sts=4 sw=4
 
         " Automatically trim EOL whitespace when editing ruby/erlang code
@@ -160,6 +160,9 @@ filetype plugin on                                " Load filetype specific
 
      " Go Lang {
         let g:go_fmt_command = "goimports"
+        " Language Server
+        let g:go_def_mode='gopls'
+        let g:go_info_mode='gopls'
      " }
 
      " NERDTree {

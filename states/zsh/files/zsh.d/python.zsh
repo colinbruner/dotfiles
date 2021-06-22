@@ -54,8 +54,3 @@ alias py2='ipython2'
 ##########
 # Poetry #
 ##########
-
-POETRY_DEFAULT_VERSION=1.1.4
-
-# Source Poetry env file
-source $HOME/.asdf/installs/poetry/$POETRY_DEFAULT_VERSION/env

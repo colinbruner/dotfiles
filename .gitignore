@@ -1,3 +1,8 @@
+# Ignore non-forced changes to aws-gen-session (account IDs)
+**aws-gen-session
+# Ignore random work related scripts
+states/bin/files/scripts/work/*
+
 .DS_Store
 # Generated
 .salt/
@@ -6,5 +11,5 @@ states/nvim/files/plugged
 states/nvim/files/backups
 states/nvim/files/.netrwhist
 
-# Work
+# Workjkk
 states/zsh/files/zsh.d/work.zsh

@@ -6,7 +6,7 @@
 function _startSSHAgent {
   echo ${1:-"Starting ssh-agent"}
   eval $(ssh-agent -s | tee ~/.ssh/environment)
-  for key in $HOME/.ssh/id_rsa*; do if [[ $key != *"pub" ]]; then ssh-add $key; fi; done
+  for key in $HOME/.ssh/id_*; do if [[ $key != *"pub" ]]; then ssh-add $key; fi; done
 }
 
 #######
