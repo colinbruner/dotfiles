@@ -1,0 +1,13 @@
+# 
+###
+# CloudTrail
+###
+# Lookup Events by EventName in CloudTrail
+# aws cloudtrail lookup-events --start-time=1624976400 --end-time=1624977000 --lookup-attributes AttributeKey=EventName,AttributeValue=CreateChannel --max-items 5
+
+###
+# IVS
+###
+# Get total number of created channels within an account
+# aws ivs list-channels | jq ".channels[].arn" | wc -l
+

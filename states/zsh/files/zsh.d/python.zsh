@@ -54,3 +54,5 @@ alias py2='ipython2'
 ##########
 # Poetry #
 ##########
+PYPI_USERNAME="colin.bruner"
+PYPI_PASSWORD=$(getpass -s pypi_pass)

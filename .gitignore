@@ -1,7 +1,7 @@
-# Ignore non-forced changes to aws-gen-session (account IDs)
-**aws-gen-session
 # Ignore random work related scripts
 states/bin/files/scripts/work/*
+# Ignore aws-gen-session script with work ACCOUNT IDs
+states/bin/files/scripts/aws/aws-gen-session
 
 .DS_Store
 # Generated

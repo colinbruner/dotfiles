@@ -23,5 +23,8 @@ export PATH="$PATH:/Library/TeX/texbin"
 # Increase File Descriptors
 ulimit -n 10240
 
+# Ansible on OSX: https://github.com/ansible/ansible/issues/31869
+export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
+
 # Uncomment for Apple Silicon
 # eval "$(/opt/homebrew/bin/brew shellenv)"
