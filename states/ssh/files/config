@@ -5,7 +5,7 @@ ForwardAgent yes
 TCPKeepAlive yes
 ServerAliveInterval 60
 Protocol 2
-ControlPath ~/.ssh/cm-%r@%h:%p
+ControlPath ~/.ssh/master-%r@%h
 ControlMaster auto
 ControlPersist 10m
 StrictHostKeyChecking no
