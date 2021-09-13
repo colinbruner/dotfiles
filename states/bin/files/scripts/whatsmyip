@@ -1,0 +1,5 @@
+#!/bin/bash
+
+IP=$(curl -s https://ifconfig.co)
+echo "${IP}" | pbcopy
+echo "${IP}"
