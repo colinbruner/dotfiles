@@ -1,0 +1,46 @@
+###
+# zsh
+###
+
+# cleanup
+- name: get current .zshrc file type
+  ansible.builtin.stat:
+    path: "{{ home }}/.zshrc"
+  register: zshrc_file
+
+- name: cleanup old .zshrc file if not symlink
+  ansible.builtin.file:
+    path: "{{ home }}/.zshrc"
+    state: absent
+  when: zshrc_file.stat.isreg and not zshrc_file.stat.islnk
+
+# install
+- name: link zshrc to ~/.zshrc
+  ansible.builtin.file:
+    src: "{{ pwd }}/files/zsh/zshrc"
+    dest: "{{ home }}/.zshrc"
+    state: link
+
+- name: ensure ~/.zsh.d directory exists
+  ansible.builtin.file:
+    path: "{{ home }}/.zsh.d"
+    state: directory
+
+- name: link zsh.d files to ~/.zsh.d/
+  ansible.builtin.file:
+    src: "{{ pwd }}/files/zsh/zsh.d/{{ item }}"
+    dest: "{{ home }}/.zsh.d/{{ item }}"
+    state: link
+  loop:  "{{ zsh_d_files }}"
+
+# sheldon
+- name: ensure ~/.config/sheldon directory exists
+  ansible.builtin.file:
+    path: "{{ home }}/.config/sheldon"
+    state: directory
+
+- name: link sheldon plugins.toml to ~/.config/sheldon/
+  ansible.builtin.file:
+    src: "{{ pwd }}/files/zsh/sheldon/plugins.toml"
+    dest: "{{ home }}/.config/sheldon/plugins.toml"
+    state: link

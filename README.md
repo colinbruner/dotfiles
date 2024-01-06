@@ -1,40 +1,28 @@
 # Dotfiles
-This is a collection of my personal dotfiles.
 
-# Setup
-The following are required to run any state or bootstrap a new system
+This is a collection of my personal dotfiles and quickstart to get up and running on a new system.
 
-## SaltStack
-```bash
-$ brew install salt
+## Quickstart
+
+The following is intended to get things up and running quickly, we will:
+
+1. Install Homebrew (OSX Package Manager)
+2. Using Homebrew, install packages defined in Brewfile
+3. Using Ansible (installed via Homebrew) install configuration files
+
 ```
+# Install Homebrew
+$ bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-## Dotfiles Directory Location - IMPORTANT
-This repo is expected to be checked out in `$HOME/git/dotfiles`. This specific directory location
-is required for the hardcoded Salt's grain `statesdir`.
+# Install Packages through Homebrew
+$ brew bundle install
+
+# Run Ansible to link files
+ansible-playbook main.yml
+```
 
 # Bootstrapping
-Begin by sourcing the local [environment.sh](./environment.sh) file to set the `sc` alias and sync
-required custom grains.
 
-```bash
-$ source environment.sh
-Setting custom salt-call to alias 'sc'
-Syncing custom grains to local cachedir...
-local:
-    - grains.user_state
-```
+## OSX
 
-## Running a single state
-You can run a single state with the following...
-```bash
-$ sc state.apply git
-```
-
-Bootstrap the entire system with the following...
-```bash
-$ sc state.highstate
-```
-
-# Credits
-Much of this taken from [casperstorm/dotfiles](https://github.com/casperstorm/dotfiles), thanks!
+Within Finder press `Command+Shift+Dot` to show hidden files, this will be needed for importing color themes into iTerm2. Current preference is `materialshell-dark`

@@ -1,0 +1,15 @@
+###
+# tmux
+###
+
+- name: ensure ~/.config/tmux directory exists
+  ansible.builtin.file:
+    path: "{{ home }}/.config/tmux"
+    state: directory
+
+- name: link tmux configuration files to ~/.config/tmux/
+  ansible.builtin.file:
+    src: "{{ pwd }}/files/tmux/{{ item }}"
+    dest: "{{ home }}/.config/tmux/{{ item }}"
+    state: link
+  loop: "{{ tmux_config_files }}"

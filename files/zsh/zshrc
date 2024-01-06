@@ -1,0 +1,59 @@
+# .zshrc
+
+#################
+# Login Scripts #
+#################
+#source $HOME/.zsh.d/login.zsh
+
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
+#############
+# oh-my-zsh #
+#############
+# NOTE: This must come before sheldon sources oh-my-zsh
+plugins=(git)
+
+################
+# Load Plugins #
+################
+source <(sheldon source)
+
+#############
+# ZSH Stuff #
+#############
+# Autoload completion scripts
+autoload -Uz compinit && compinit
+autoload -U promptinit; promptinit
+
+# Set list colors for ZSH
+zstyle ':completion:*' list-colors "=(#b) #([0-9]#)*=36=31"
+# Disable SSH host completion
+zstyle ':completion:*' hosts off
+
+##########################
+## Load Additional Files #
+##########################
+# Generic System Things/Improvements/Preferences
+source $HOME/.zsh.d/system.zsh
+source $HOME/.zsh.d/aliases.zsh
+source $HOME/.zsh.d/funcs.zsh
+source $HOME/.zsh.d/exports.zsh
+# Code Related Files
+source $HOME/.zsh.d/python.zsh
+#source $HOME/.zsh.d/ruby.zsh
+source $HOME/.zsh.d/go.zsh
+source $HOME/.zsh.d/rust.zsh
+#source $HOME/.zsh.d/nvm.zsh
+# OSX Specifics
+source $HOME/.zsh.d/osx.zsh
+if [ -f $HOME/.zsh.d/work.zsh ]; then
+  source $HOME/.zsh.d/work.zsh
+fi
+
+# powerlevel10k
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

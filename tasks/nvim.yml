@@ -1,0 +1,27 @@
+###
+# nvim
+###
+
+# install
+- name: ensure ~/.config/nvim directory exists
+  ansible.builtin.file:
+    path: "{{ home }}/.config/nvim"
+    state: directory
+
+- name: link nvim init.vim configuration file
+  ansible.builtin.file:
+    src: "{{ pwd }}/files/nvim/init.vim"
+    dest: "{{ home }}/.config/nvim/init.vim"
+    state: link
+
+- name: ensure ~/.config/nvim directory exists
+  ansible.builtin.file:
+    path: "{{ home }}/.config/nvim"
+    state: directory
+
+- name: link nvim configuraton files to ~/.config/nvim/
+  ansible.builtin.file:
+    src: "{{ pwd }}/files/nvim/{{ item }}"
+    dest: "{{ home }}/.config/nvim/{{ item }}"
+    state: link
+  loop: "{{ nvim_configuration_files }}"
