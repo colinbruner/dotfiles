@@ -1,0 +1,15 @@
+###
+# iterm
+###
+
+- name: ensure ~/.config/iterm2 directory exists
+  ansible.builtin.file:
+    path: "{{ home }}/.config/iterm2"
+    state: directory
+
+- name: link iterm2 style files to ~/.config/iterm2/
+  ansible.builtin.file:
+    src: "{{ pwd }}/files/iterm2/{{ item }}"
+    dest: "{{ home }}/.config/iterm2/{{ item }}"
+    state: link
+  loop: "{{ iterm2_style_files }}"

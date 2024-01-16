@@ -1,0 +1,26 @@
+- hosts: localhost
+  vars:
+    pwd: "{{ playbook_dir }}" # lazy shortcut to get pwd
+    home: "{{ ansible_env.HOME }}"
+  tasks:
+    - name: include all default configuration variables
+      ansible.builtin.include_vars:
+        file: defaults/main.yml
+
+    - name: install git configurations
+      ansible.builtin.include_tasks: tasks/git.yml
+
+    - name: install iterm style files
+      ansible.builtin.include_tasks: tasks/iterm2.yml
+
+    - name: install nvim configurations
+      ansible.builtin.include_tasks: tasks/nvim.yml
+
+    - name: install ssh configurations
+      ansible.builtin.include_tasks: tasks/ssh.yml
+
+    - name: install tmux configurations
+      ansible.builtin.include_tasks: tasks/tmux.yml
+
+    - name: install zsh configurations
+      ansible.builtin.include_tasks: tasks/zsh.yml

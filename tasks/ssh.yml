@@ -1,0 +1,35 @@
+###
+# ssh
+###
+
+# cleanup
+- name: get current ~/.ssh/config file type
+  ansible.builtin.stat:
+    path: "{{ home }}/.ssh/config"
+  register: ssh_config_file
+
+- name: cleanup old ~/.ssh/config file if not symlink
+  ansible.builtin.file:
+    path: "{{ home }}/.ssh/config"
+    state: absent
+  when: ssh_config_file.stat.isreg and not ssh_config_file.stat.islnk
+
+# install
+- name: ensure ~/.ssh directory exists
+  ansible.builtin.file:
+    path: "{{ home }}/.ssh"
+    state: directory
+
+- name: ensure ~/.ssh sub-directories exist
+  ansible.builtin.file:
+    path: "{{ home }}/.ssh/{{ item }}"
+    state: directory
+  loop: "{{ ssh_sub_directories }}"
+
+- name: link ssh configuration files to ~/.ssh/
+  ansible.builtin.file:
+    src: "{{ pwd }}/files/ssh/{{ item }}"
+    dest: "{{ home }}/.ssh/{{ item }}"
+    mode: 0600
+    state: link
+  loop: "{{ ssh_configuration_files }}"

@@ -1,0 +1,22 @@
+[user]
+  name = Colin Bruner
+  email = code@colinbruner.com
+  username = colinbruner
+  signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKzTtruPACSaNYHFAY6abDgVVXqoKrTvqRxliUk2G/pb
+
+[gpg]
+  format = ssh
+[gpg "ssh"]
+  program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
+[commit]
+  gpgsign = true
+
+[branch]
+  autosetuprebase = always
+  autoSetupRebase = remote
+[core]
+  editor = nvim
+[push]
+  autoSetupRemote = true
+[pager]
+  branch = false
