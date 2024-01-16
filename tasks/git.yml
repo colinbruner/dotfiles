@@ -2,21 +2,8 @@
 # git
 ###
 
-# cleanup
-- name: get current .gitconfig file type
-  ansible.builtin.stat:
-    path: "{{ home }}/.gitconfig"
-  register: gitconfig_file
-
-- name: cleanup old .gitconfig file if not symlink
-  ansible.builtin.file:
-    path: "{{ home }}/.gitconfig"
-    state: absent
-  when: gitconfig_file.stat.isreg and not gitconfig_file.stat.islnk
-
-# install
-- name: link gitconfig to ~/.gitconfig
-  ansible.builtin.file:
+  # Change very rarely, and will cause git pull to break if it doesn't exist in this repo
+- name: copy gitconfig to ~/..gitconfig/
+  ansible.builtin.copy:
     src: "{{ pwd }}/files/git/gitconfig"
     dest: "{{ home }}/.gitconfig"
-    state: link

@@ -26,7 +26,14 @@
     state: directory
   loop: "{{ ssh_sub_directories }}"
 
-- name: link ssh configuration files to ~/.ssh/
+  # Change very rarely, and will cause git pull to break if it doesn't exist in this repo
+- name: copy main ssh config file to ~/.ssh/
+  ansible.builtin.copy:
+    src: "{{ pwd }}/files/ssh/config"
+    dest: "{{ home }}/.ssh/config"
+    mode: 0600
+
+- name: link auxiliary ssh configuration files to ~/.ssh/
   ansible.builtin.file:
     src: "{{ pwd }}/files/ssh/{{ item }}"
     dest: "{{ home }}/.ssh/{{ item }}"
