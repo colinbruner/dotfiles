@@ -1,0 +1,15 @@
+
+# install
+- name: ensure ~/.bin directory exists
+  ansible.builtin.file:
+    path: "{{ home }}/.bin"
+    state: directory
+
+- name: link bin scripts to ~/.bin/
+  ansible.builtin.file:
+    src: "{{ pwd }}/files/bin/{{ item }}"
+    dest: "{{ home }}/.bin/{{ item }}"
+    mode: 0755
+    state: link
+  loop:  # TODO: loop over all files/bin/ directory
+    - updateBrew

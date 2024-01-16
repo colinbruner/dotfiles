@@ -14,6 +14,9 @@ brew 'fd' # Replacement for file, 'fd' binary
 brew 'ripgrep' # Replacement for grep, 'rg' binary
 brew 'gnupg'
 
+brew 'zola'
+brew 'hugo'
+
 # Install Network Utilities
 brew "mtr"
 brew "nmap"

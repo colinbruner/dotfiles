@@ -1,8 +1,10 @@
 # go.zsh
 
+GO_VERSION="1.21.6"
+
 if [[ `uname` == 'Darwin' ]]; then
     # Install via homebrew
-    export GOROOT="/usr/local/opt/go/libexec"
+    export GOROOT="/opt/homebrew/Cellar/go/${GO_VERSION}/libexec"
     export PATH="$PATH:/usr/local/opt/go/bin"
 elif [ -d "/usr/local/go" ]; then
     export GOROOT="/usr/local/go"

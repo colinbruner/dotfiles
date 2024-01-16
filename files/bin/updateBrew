@@ -1,0 +1,8 @@
+#!/bin/bash
+
+#NOTE: Consider using HOMEBREW_BUNDLE_FILE_GLOBAL
+BREWFILE_DIR="${1:-$HOME/code/colinbruner/dotfiles}"
+cd $BREWFILE_DIR
+
+echo "Updating based on Brewfile in $BREWFILE_DIR"
+bundle bundle
