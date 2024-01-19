@@ -15,7 +15,7 @@ fi
 alias tmux='tmux -2'
 
 # Laziness Shortcuts
-alias dfs='cd ~/git/dotfiles'
+alias dfs='cd ~/code/colinbruner/dotfiles'
 
 # Alias ipcalc to 'sipcalc' brew installed executable
 alias ipcalc='sipcalc'

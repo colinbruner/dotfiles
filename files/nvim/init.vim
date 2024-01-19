@@ -21,10 +21,9 @@ filetype plugin on                                " Load filetype specific
 " Look and feel {
     set termguicolors
 	let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-	let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
 
 	syntax enable
-	"colorscheme onedark
+	colorscheme onedark
 	set background=dark
 
 	" Enable mouse support

@@ -16,7 +16,6 @@ export HOMEBREW_DIR=/usr/local/homebrew
 export HOMEBREW_GITHUB_API_TOKEN=''
 export HOMEBREW_CASK_OPTS="--appdir=~/Applications --caskroom=/opt/homebrew-cask/Caskroom"
 export HOMEBREW_NO_ANALYTICS=1
-export PATH="/opt/homebrew/bin:/opt/homebrew/sbin${PATH+:$PATH}";
 
 # Increase File Descriptors
 ulimit -n 10240
