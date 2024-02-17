@@ -13,6 +13,7 @@ brew 'jq'
 brew 'fd' # Replacement for file, 'fd' binary
 brew 'ripgrep' # Replacement for grep, 'rg' binary
 brew 'gnupg'
+brew 'tre-command'
 
 brew 'zola'
 brew 'hugo'
