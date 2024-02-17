@@ -34,6 +34,9 @@ alias pubkey="cat ~/.ssh/id_rsa.pub | pbcopy | echo '=> Public key copied to pas
 # util
 alias lower="awk '{print tolower(\$0)}'"
 alias upper="awk '{print toupper(\$0)}'"
+## remove newline character, useful in making certs into a single line and encoded with \n
+alias add_newline_character="awk 'NF {sub(/\r/, \"\"); printf \"%s\\\\n\",\$0;}'"
+
 alias grepnc='grep -v "^$\|^#"'
 alias startssh='eval `ssh-agent -s` && ssh-add'
 # https://github.com/asciinema/asciicast2gif

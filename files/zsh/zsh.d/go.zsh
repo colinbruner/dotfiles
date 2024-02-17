@@ -13,14 +13,8 @@ else
     export GOROOT="/app/go/"
 fi
 
-if [[ $(hostname) == *"RES"* ]] && [ -d "$HOME/go" ]; then 
-    export GOPATH="$HOME/go"
-    #export GOWORK="$GOPATH/src/github.com/colinbruner"
-    export GOBIN="$GOPATH/bin"
-    export PATH="$PATH:$GOBIN"
-elif [ -d "$HOME/go" ]; then
-    export GOPATH="$HOME/go"
-    #export GOWORK="$GOPATH/src/github.com/colinbruner"
-    export GOBIN="$GOPATH/bin"
-    export PATH="$PATH:$GOBIN"
-fi 
+export GOPATH="$HOME/go"
+# https://go.dev/ref/mod#workspaces
+export GOWORK="off" # Set 'off' by default
+export GOBIN="$GOPATH/bin"
+export PATH="$PATH:$GOBIN"
