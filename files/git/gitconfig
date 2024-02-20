@@ -16,7 +16,13 @@
   autoSetupRebase = remote
 [core]
   editor = nvim
+[pull]
+  rebase = true
 [push]
   autoSetupRemote = true
+[rebase]
+  autostash = true
+[merge]
+  conflictstyle = zdiff3
 [pager]
   branch = false
