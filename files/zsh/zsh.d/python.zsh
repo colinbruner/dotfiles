@@ -1,6 +1,6 @@
 # python.zsh
 
-PYTHON3_VERSION=3.10
+PYTHON3_VERSION=3.11
 
 #export PATH="$PATH:$HOME/Library/Python/$PYTHON3_VERSION/bin"
 export PATH="/usr/local/opt/python@${PYTHON3_VERSION}/bin:$PATH"
@@ -13,7 +13,7 @@ export VIRTUAL_ENV_DISABLE_PROMPT=true
 export WORKON_HOME=$HOME/.virtualenvs
 
 if [[ -x $(which virtualenvwrapper.sh) ]]; then
-    VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
+    VIRTUALENVWRAPPER_PYTHON=/opt/homebrew/bin/python3
     source $(which virtualenvwrapper.sh)
 fi
 
