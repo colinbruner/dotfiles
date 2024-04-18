@@ -12,7 +12,7 @@
   ansible.builtin.file:
     path: "{{ home }}/.zshrc"
     state: absent
-  when: zshrc_file.stat.isreg and not zshrc_file.stat.islnk
+  when: zshrc_file.stat.exists and (zshrc_file.stat.isreg and not zshrc_file.stat.islnk)
 
 # install
 - name: link zshrc to ~/.zshrc
