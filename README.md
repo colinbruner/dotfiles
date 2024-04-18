@@ -23,6 +23,21 @@ ansible-playbook main.yml
 
 # Bootstrapping
 
+## Neovim
+Install `neovim` via `pip3` then:
+
+1. Launch `vim`
+2. Run `:PlugUpdate`
+3. Run `:UpdateRemotePlugins`
+
 ## OSX
 
 Within Finder press `Command+Shift+Dot` to show hidden files, this will be needed for importing color themes into iTerm2. Current preference is `materialshell-dark`
+
+## Code
+
+Install 'code' binary in PATH
+
+1. Launch VS Code.
+2. Open the Command Palette (Cmd+Shift+P) and type 'shell command' to find the Shell Command: Install 'code' command in PATH command.
+
