@@ -1,7 +1,9 @@
 #!/bin/bash
 
-# Install Homebrew
-bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+if [[ ! $(which brew) ]]; then
+  # Install Homebrew
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+fi
 
 # Install Packages through Homebrew
 brew bundle install

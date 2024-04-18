@@ -10,15 +10,9 @@ The following is intended to get things up and running quickly, we will:
 2. Using Homebrew, install packages defined in Brewfile
 3. Using Ansible (installed via Homebrew) install configuration files
 
-```
-# Install Homebrew
-$ bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-
-# Install Packages through Homebrew
-$ brew bundle install
-
-# Run Ansible to link files
-ansible-playbook main.yml
+```bash
+# Bootstraps the above command
+$ ./bootstrap.sh
 ```
 
 # Bootstrapping
