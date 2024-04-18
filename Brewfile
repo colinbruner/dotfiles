@@ -27,6 +27,13 @@ brew 'sipcalc'
 brew 'go'
 brew 'python3'
 
+# Hashicorp
+brew 'packer'
+brew 'terraform'
+brew 'vault'
+brew 'consul'
+brew 'nomad'
+
 # Shell
 brew 'zsh'
 brew 'sheldon'
