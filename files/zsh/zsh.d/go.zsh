@@ -1,6 +1,6 @@
 # go.zsh
 
-GO_VERSION="1.21.6"
+GO_VERSION="1.22.2"
 
 if [[ `uname` == 'Darwin' ]]; then
     # Install via homebrew

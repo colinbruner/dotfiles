@@ -17,3 +17,12 @@ function gcp-config-activate {
 }
 
 export CLOUDSDK_PYTHON="/Users/${USER}/.pyenv/shims/python"
+
+###
+# gcloud
+###
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/colin.bruner/.bin/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/colin.bruner/.bin/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/colin.bruner/.bin/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/colin.bruner/.bin/google-cloud-sdk/completion.zsh.inc'; fi

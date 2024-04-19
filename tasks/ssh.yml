@@ -2,18 +2,6 @@
 # ssh
 ###
 
-# cleanup
-- name: get current ~/.ssh/config file type
-  ansible.builtin.stat:
-    path: "{{ home }}/.ssh/config"
-  register: ssh_config_file
-
-- name: cleanup old ~/.ssh/config file if not symlink
-  ansible.builtin.file:
-    path: "{{ home }}/.ssh/config"
-    state: absent
-  when: ssh_config_file.stat.isreg and not ssh_config_file.stat.islnk
-
 # install
 - name: ensure ~/.ssh directory exists
   ansible.builtin.file:

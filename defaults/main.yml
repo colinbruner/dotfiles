@@ -27,7 +27,7 @@ ssh_sub_directories:
 # they are installed withinin ~/.ssh, e.g. ~/.ssh/home/config
 ssh_configuration_files:
   - home/config
-  - work/config
+  #- work/config # NOTE: not checking in work SSH configurations to personal GitHub
 
 ###
 # tmux

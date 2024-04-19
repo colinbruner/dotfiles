@@ -14,6 +14,7 @@ brew 'fd' # Replacement for file, 'fd' binary
 brew 'ripgrep' # Replacement for grep, 'rg' binary
 brew 'gnupg'
 brew 'tre-command'
+cask '1password-cli'
 
 brew 'zola'
 brew 'hugo'
@@ -26,6 +27,7 @@ brew 'sipcalc'
 # Install Languages
 brew 'go'
 brew 'python3'
+brew 'pyenv-virtualenv' # all python packages in a virtualenv
 
 # Hashicorp
 brew 'packer'
