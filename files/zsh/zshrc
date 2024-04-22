@@ -59,6 +59,3 @@ fi
 
 # powerlevel10k
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-# Ensure homebrew binaries are access BEFORE system binaries
-export PATH="/opt/homebrew/bin:/opt/homebrew/sbin/:$PATH"

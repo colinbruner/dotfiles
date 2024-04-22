@@ -1,13 +1,10 @@
 # python.zsh
 
-#PYTHON3_VERSION=3.11
-
-#export PATH="$PATH:$HOME/Library/Python/$PYTHON3_VERSION/bin"
-#export PATH="/usr/local/opt/python@${PYTHON3_VERSION}/bin:$PATH"
-
 ###
 # Virtualenv
 ###
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
 # https://github.com/pyenv/pyenv-virtualenv/issues/387#issuecomment-850839749
 # :(
 eval "$(pyenv init --path)"
@@ -27,18 +24,18 @@ alias v.deactivate='pyenv deactivate' # deactivate venv
 alias v.mk='pyenv virtualenv'         # create venv
 alias v.rm='pyenv virtualenv-delete'  # delete venv
 
+###
+# Aliases
+###
 alias py='ipython'
 
-#########
-# pyenv #
-#########
+###
+# Poetry
+###
+# Trusting System certs in an venv with poetry install
+#poetry self add pip-system-certs
+#poetry self lock
+#poetry self install
 
-#export PYENV_ROOT="$HOME/.pyenv"
-#command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-#eval "$(pyenv init -)"
-
-##########
-# Poetry #
-##########
 #PYPI_USERNAME="colin.bruner"
 #PYPI_PASSWORD=$(getpass -s pypi_pass)

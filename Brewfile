@@ -28,6 +28,7 @@ brew 'sipcalc'
 brew 'go'
 brew 'python3'
 brew 'pyenv-virtualenv' # all python packages in a virtualenv
+brew 'pipx'
 
 # Hashicorp
 brew 'packer'
