@@ -37,6 +37,9 @@ brew 'vault'
 brew 'consul'
 brew 'nomad'
 
+# K8s
+brew 'kubectl'
+
 # Shell
 brew 'zsh'
 brew 'sheldon'
