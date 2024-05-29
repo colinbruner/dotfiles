@@ -15,6 +15,7 @@ brew 'ripgrep' # Replacement for grep, 'rg' binary
 brew 'gnupg'
 brew 'tre-command'
 cask '1password-cli'
+brew 'git-crypt'
 
 brew 'zola'
 brew 'hugo'
@@ -34,11 +35,14 @@ brew 'pipx'
 brew 'packer'
 brew 'terraform'
 brew 'vault'
-brew 'consul'
-brew 'nomad'
+# alternatively, install from releases.hashicorp.com
+#brew 'consul'
+#brew 'nomad'
 
 # K8s
 brew 'kubectl'
+brew 'k9s'
+brew 'helm'
 
 # Shell
 brew 'zsh'
