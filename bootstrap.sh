@@ -1,5 +1,7 @@
 #!/bin/bash
 
+#TODO: Add comment/uncomment steps for ansible
+
 if [[ ! $(which brew) ]]; then
   # Install Homebrew
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"

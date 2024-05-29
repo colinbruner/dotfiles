@@ -7,8 +7,10 @@ This is a collection of my personal dotfiles and quickstart to get up and runnin
 The following is intended to get things up and running quickly, we will:
 
 1. Install Homebrew (OSX Package Manager)
-2. Using Homebrew, install packages defined in Brewfile
-3. Using Ansible (installed via Homebrew) install configuration files
+2. Uncomment the 'ansible' install in Brewfile
+3. Using Homebrew, install packages defined in Brewfile
+4. Using Ansible (installed via Homebrew) install configuration files
+5. Comment out 'ansible' install in Brewfile, run 'brew bundle --cleanup'
 
 ```bash
 # Bootstraps the above command

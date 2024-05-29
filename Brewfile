@@ -1,6 +1,7 @@
 # Bootstrapping
 # NOTE: This is used in bootstraping dotfiles, I keep it for general server mgmt
-brew 'ansible' 
+# After initial install, I prefer to keep this within a Python virtualenv
+#brew 'ansible' 
 
 # Install Development Utilities
 brew 'git'
