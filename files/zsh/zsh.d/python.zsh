@@ -11,6 +11,9 @@ eval "$(pyenv init --path)"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
+# Return available python 3.x.x versions
+alias pyenv-available-install=$(pyenv install -l | egrep '^  3.*')
+
 # list or activate venvs
 function v() {
     if [[ $1 == "" ]]; then
@@ -20,8 +23,19 @@ function v() {
     fi
 }
 
+# create python version using latest installed or optionally supplied version
+function v.mk() {
+    if [[ $2 == "" ]]; then
+        # attempt to grab latest installed version
+        local latestInstalled=$(pyenv versions --bare --skip-aliases --skip-envs | tail -1)
+        echo "Creating virtualenv using Python version: '${latestInstalled}'"
+        pyenv virtualenv $latestInstalled $@
+    else
+        pyenv virtualenv $@
+    fi
+}
+
 alias v.deactivate='pyenv deactivate' # deactivate venv
-alias v.mk='pyenv virtualenv'         # create venv
 alias v.rm='pyenv virtualenv-delete'  # delete venv
 
 ###
