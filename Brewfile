@@ -10,11 +10,11 @@ brew 'tmux'
 
 # Install CLI Utilities
 brew 'jq'
-brew 'fd' # Replacement for file, 'fd' binary
-brew 'ripgrep' # Replacement for grep, 'rg' binary
+brew 'fd'            # Replacement for file, 'fd' binary
+brew 'ripgrep'       # Replacement for grep, 'rg' binary
 brew 'gnupg'
-brew 'tre-command'
-cask '1password-cli'
+brew 'tre-command'   # Replacement for tree, 'tre' binary
+cask '1password-cli' # Installs 'op' binary
 brew 'git-crypt'
 
 brew 'zola'
@@ -28,6 +28,7 @@ brew 'sipcalc'
 # Install Languages
 brew 'go'
 brew 'python3'
+brew 'python-tk'        # prevents error when compiling different python versions with pyenv
 brew 'pyenv-virtualenv' # all python packages in a virtualenv
 brew 'pipx'
 
