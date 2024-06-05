@@ -1459,11 +1459,18 @@
             }
           }
         }
+      },
+      "talosctl": {
+        "version": "1.7.4",
+        "bottle": false
       }
     },
     "tap": {
       "neovim/neovim": {
         "revision": "e587b5c90456a895a11bc5ae81e5cfdde6b23dd4"
+      },
+      "siderolabs/tap": {
+        "revision": "e74921fd6d0f3735090b813def166767dabcffa2"
       }
     },
     "cask": {

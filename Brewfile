@@ -45,6 +45,9 @@ brew 'vault'
 brew 'kubectl'
 brew 'k9s'
 brew 'helm'
+## K8s Talos
+tap 'siderolabs/tap'
+brew 'talosctl'
 
 # Shell
 brew 'zsh'
