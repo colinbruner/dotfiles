@@ -30,11 +30,15 @@ brew 'sipcalc'
 # Install Languages
 brew 'go'
 brew 'python3'
+brew 'java'
 
-# Install Python Tools
+# Install Language Tools
+## Python
 brew 'python-tk'        # prevents error when compiling different python versions with pyenv
 brew 'pyenv-virtualenv' # all python packages in a virtualenv
 brew 'pipx'
+## Java
+brew 'jenv'
 
 # Hashicorp
 brew 'packer'

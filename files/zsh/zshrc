@@ -50,6 +50,7 @@ source $HOME/.zsh.d/python.zsh
 #source $HOME/.zsh.d/ruby.zsh
 source $HOME/.zsh.d/go.zsh
 source $HOME/.zsh.d/rust.zsh
+source $HOME/.zsh.d/java.zsh
 #source $HOME/.zsh.d/nvm.zsh
 # OSX Specifics
 source $HOME/.zsh.d/osx.zsh
