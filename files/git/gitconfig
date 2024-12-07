@@ -3,7 +3,6 @@
   email = code@colinbruner.com
   username = colinbruner
   signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPE/CB9u3hsHE6/8vnQs4ZB4KFNDQsTKkce5SrPQD4gH
-
 [gpg]
   format = ssh
 [gpg "ssh"]

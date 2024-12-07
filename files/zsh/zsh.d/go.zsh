@@ -1,6 +1,7 @@
 # go.zsh
 
-GO_VERSION="1.22.3"
+# HACK: for auto update on upgrades
+GO_VERSION=$(ls /opt/homebrew/Cellar/go/)
 
 if [[ `uname` == 'Darwin' ]]; then
     # Install via homebrew
