@@ -11,6 +11,7 @@ brew 'tmux'
 
 # Install CLI Utilities
 brew 'jq'
+brew 'yq'
 brew 'fd'            # Replacement for file, 'fd' binary
 brew 'ripgrep'       # Replacement for grep, 'rg' binary
 brew 'gnupg'
