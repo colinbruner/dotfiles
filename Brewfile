@@ -51,6 +51,7 @@ brew 'vault'
 
 # K8s
 brew 'kubectl'
+brew 'kubectx'
 brew 'k9s'
 brew 'helm'
 ## K8s Talos
