@@ -1,7 +1,7 @@
 # Bootstrapping
 # NOTE: This is used in bootstraping dotfiles, I keep it for general server mgmt
 # After initial install, I prefer to keep this within a Python virtualenv
-#brew 'ansible' 
+brew 'ansible' 
 
 # Install Development Utilities
 brew 'git'
@@ -10,8 +10,6 @@ brew 'neovim'
 brew 'tmux'
 
 # Install CLI Utilities
-brew 'jq'
-brew 'yq'
 brew 'fd'            # Replacement for file, 'fd' binary
 brew 'ripgrep'       # Replacement for grep, 'rg' binary
 brew 'gnupg'
@@ -43,11 +41,11 @@ brew 'jenv'
 
 # Hashicorp
 brew 'packer'
-brew 'terraform'
+brew 'terraform' # NOTE: outdated
 brew 'vault'
-# alternatively, install from releases.hashicorp.com
-#brew 'consul'
-#brew 'nomad'
+## Hashicorp Adjacent
+brew 'terragrunt'
+brew 'opentofu'
 
 # K8s
 brew 'kubectl'
@@ -61,6 +59,11 @@ brew 'talosctl'
 # YAML Tools
 tap 'carvel-dev/carvel'
 brew 'ytt'
+brew 'yq'
+
+# JSON Tools
+brew 'jsonnet'
+brew 'jq'
 
 # Shell
 brew 'zsh'
