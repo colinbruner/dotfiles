@@ -17,6 +17,9 @@ brew 'tre-command'   # Replacement for tree, 'tre' binary
 cask '1password-cli' # Installs 'op' binary
 brew 'git-crypt'
 
+## Cloud CLI Utilities
+brew 'awscli'
+
 # Static Site Generators
 brew 'zola'
 brew 'hugo'
