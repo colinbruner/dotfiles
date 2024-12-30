@@ -24,3 +24,6 @@
 
     - name: install zsh configurations
       ansible.builtin.include_tasks: tasks/zsh.yml
+
+    - name: install cloud configurations
+      ansible.builtin.include_tasks: tasks/cloud.yml

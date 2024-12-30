@@ -1,0 +1,9 @@
+
+# AWSCLI is configured through 1Password
+# However, the 'aws' command will always create $HOME/.aws/config
+# The command expects a '[default]' profile to be present, or errors.
+
+- name: "ensure aws/config file exists with default profile"
+  ansible.builtin.copy:
+    dest: "{{ home }}/.aws/config"
+    content: "[default]"
