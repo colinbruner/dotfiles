@@ -1,3 +1,5 @@
+# 51-osx.zsh
+
 # Linux like file colors
 export LSCOLORS=ExFxBxDxCxegedabagacad
 
@@ -10,6 +12,18 @@ export X11_PREFS_DOMAIN="org.macosforge.xquartz.X11"
 
 # iTerm Stuff
 [[ -e $HOME/.iterm2_shell_integration.zsh ]] && source $HOME/.iterm2_shell_integration.zsh
+
+###
+# Homebrew
+# NOTE: This needs to be added early in process for
+# other commands to be found
+###
+if [[ -d "/opt/homebrew/bin/" ]];then
+  USER_BIN+=":/opt/homebrew/bin"
+fi
+if [[ -d "/opt/homebrew/sbin/" ]];then
+  USER_BIN+=":/opt/homebrew/sbin"
+fi
 
 #Required for OSX Brew OpenSSH
 #export HOMEBREW_DIR=/usr/local/homebrew

@@ -1,4 +1,4 @@
-# go.zsh
+# 21-golang.zsh
 
 # HACK: for auto update on upgrades
 GO_VERSION=$(ls /opt/homebrew/Cellar/go/)

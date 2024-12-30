@@ -1,4 +1,4 @@
-# rust.zsh
+# 22-rust.zsh
 
 export PATH="$HOME/.cargo/bin:$PATH"
 

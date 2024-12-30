@@ -1,4 +1,4 @@
-# gcp.zsh
+# 30-gcp.zsh
 
 export USE_GKE_GCLOUD_AUTH_PLUGIN=true
 export PATH="$PATH:$HOME/.bin/google-cloud-sdk/bin/"
@@ -22,7 +22,7 @@ export CLOUDSDK_PYTHON="/Users/${USER}/.pyenv/shims/python"
 # gcloud
 ###
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/colin.bruner/.bin/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/colin.bruner/.bin/google-cloud-sdk/path.zsh.inc'; fi
+if [ -f "$HOME.bin/google-cloud-sdk/path.zsh.inc" ]; then . "$HOME/.bin/google-cloud-sdk/path.zsh.inc"; fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f '/Users/colin.bruner/.bin/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/colin.bruner/.bin/google-cloud-sdk/completion.zsh.inc'; fi
+if [ -f "$HOME.bin/google-cloud-sdk/completion.zsh.inc" ]; then . "$HOME.bin/google-cloud-sdk/completion.zsh.inc"; fi

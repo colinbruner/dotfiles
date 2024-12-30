@@ -1,4 +1,4 @@
-# funcs.zsh
+# 03-funcs.zsh
 
 # General
 function random () {

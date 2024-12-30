@@ -1,3 +1,5 @@
+# 23-java.zsh
+
 # brew install jenv
 export PATH="$HOME/.jenv/bin:$PATH"
 eval "$(jenv init -)"

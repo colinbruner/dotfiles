@@ -1,8 +1,4 @@
-# alises.zsh
-
-###########
-# Aliases #
-###########
+# 02-alises.zsh
 
 # vim
 alias vi=$(which vim)

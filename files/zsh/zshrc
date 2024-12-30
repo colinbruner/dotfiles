@@ -1,11 +1,10 @@
 # .zshrc
 
-#################
-# Login Scripts #
-#################
-#source $HOME/.zsh.d/login.zsh
-#NOTE: Adds Homebrew commands to PATH, 'sheldon' needed shortly after
-eval "$(/opt/homebrew/bin/brew shellenv)"
+# OSX
+if [[ $(uname) == "Darwin" ]]; then
+  #NOTE: Adds Homebrew commands to PATH, 'sheldon' needed shortly after
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+fi
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
@@ -14,20 +13,20 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-#############
-# oh-my-zsh #
-#############
-# NOTE: This must come before sheldon sources oh-my-zsh
+###
+# oh-my-zsh 
+###
+# NOTE: This MUST come before sheldon sources oh-my-zsh
 plugins=(git)
 
-################
-# Load Plugins #
-################
+###
+# Load Plugins
+###
 source <(sheldon source)
 
-#############
-# ZSH Stuff #
-#############
+###
+# ZSH Stuff
+###
 # Autoload completion scripts
 autoload -Uz compinit && compinit
 autoload -U promptinit; promptinit
@@ -37,26 +36,18 @@ zstyle ':completion:*' list-colors "=(#b) #([0-9]#)*=36=31"
 # Disable SSH host completion
 zstyle ':completion:*' hosts off
 
-##########################
-## Load Additional Files #
-##########################
-# Generic System Things/Improvements/Preferences
-source $HOME/.zsh.d/system.zsh
-source $HOME/.zsh.d/aliases.zsh
-source $HOME/.zsh.d/funcs.zsh
-source $HOME/.zsh.d/exports.zsh
-# Code Related Files
-source $HOME/.zsh.d/python.zsh
-#source $HOME/.zsh.d/ruby.zsh
-source $HOME/.zsh.d/go.zsh
-source $HOME/.zsh.d/rust.zsh
-source $HOME/.zsh.d/java.zsh
-#source $HOME/.zsh.d/nvm.zsh
-# OSX Specifics
-source $HOME/.zsh.d/osx.zsh
-if [ -f $HOME/.zsh.d/work.zsh ]; then
-  source $HOME/.zsh.d/work.zsh
-fi
+###
+# Configuration
+###
+# NOTE: Files are loaded lexicographically by glob expansion
+# Layout: 
+# - 00-09: System
+# - 20-29: Code
+# - 30-39: Cloud
+# - 50-59: Operating System
+# - 80: Work
+# - 99: Overrides
+source $HOME/.zsh.d/*.zsh
 
-# powerlevel10k
+# powerlevel10k prompt
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

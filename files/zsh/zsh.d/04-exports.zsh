@@ -1,4 +1,4 @@
-# exports.zsh
+# 04-exports.zsh
 
 ############
 ## General #
