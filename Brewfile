@@ -46,9 +46,10 @@ brew 'pipx'
 brew 'jenv'
 
 # Hashicorp
-brew 'packer'
-brew 'terraform' # NOTE: outdated
-brew 'vault'
+tap 'hashicorp/tap'
+brew 'hashicorp/tap/packer'
+brew 'hashicorp/tap/terraform'
+brew 'hashicorp/tap/vault'
 ## Hashicorp Adjacent
 brew 'terragrunt'
 brew 'opentofu'
