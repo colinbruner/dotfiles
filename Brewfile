@@ -3,11 +3,14 @@
 # After initial install, I prefer to keep this within a Python virtualenv
 brew 'ansible' 
 
+# Install Terminal Utilities
+#cask 'ghostty'
+brew 'tmux'
+
 # Install Development Utilities
 brew 'git'
 tap 'neovim/neovim' || true
 brew 'neovim'
-brew 'tmux'
 
 # Install CLI Utilities
 brew 'fd'            # Replacement for file, 'fd' binary
