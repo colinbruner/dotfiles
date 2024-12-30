@@ -47,7 +47,9 @@ zstyle ':completion:*' hosts off
 # - 50-59: Operating System
 # - 80: Work
 # - 99: Overrides
-source $HOME/.zsh.d/*.zsh
+for configFile in $HOME/.zsh.d/*.zsh; do
+  source $configFile
+done
 
 # powerlevel10k prompt
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

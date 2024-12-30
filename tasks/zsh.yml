@@ -26,12 +26,16 @@
     path: "{{ home }}/.zsh.d"
     state: directory
 
+- name: find local zsh configuration files in zsh.d
+  ansible.builtin.shell: "ls files/zsh/zsh.d/*.zsh"
+  register: zsh_d_files
+
 - name: link zsh.d files to ~/.zsh.d/
   ansible.builtin.file:
-    src: "{{ pwd }}/files/zsh/zsh.d/{{ item }}"
-    dest: "{{ home }}/.zsh.d/{{ item }}"
+    src: "{{ pwd }}/files/zsh/zsh.d/{{ item | basename }}"
+    dest: "{{ home }}/.zsh.d/{{ item | basename }}"
     state: link
-  loop:  "{{ zsh_d_files }}"
+  loop:  "{{ zsh_d_files.stdout_lines }}"
 
 # sheldon
 - name: ensure ~/.config/sheldon directory exists
