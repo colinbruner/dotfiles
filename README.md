@@ -6,15 +6,13 @@ This is a collection of my personal dotfiles and quickstart to get up and runnin
 
 The following is intended to get things up and running quickly, we will:
 
-1. Install Homebrew (OSX Package Manager)
-2. Uncomment the 'ansible' install in Brewfile
-3. Using Homebrew, install packages defined in Brewfile
-4. Using Ansible (installed via Homebrew) install configuration files
-5. Comment out 'ansible' install in Brewfile, run 'brew bundle --cleanup'
+1. Install Homebrew (OSX Package Manager), or 'brew'
+1. Using brew, install packages defined in Brewfile
+1. Using Ansible (installed via Homebrew) install configurations
 
 ```bash
-# Bootstraps the above command
-$ ./bootstrap.sh
+# Runs 'brew bundle' and 'ansible-playbook'
+$ ./install.sh
 ```
 
 # Bootstrapping
@@ -37,3 +35,11 @@ Install 'code' binary in PATH
 1. Launch VS Code.
 2. Open the Command Palette (Cmd+Shift+P) and type 'shell command' to find the Shell Command: Install 'code' command in PATH command.
 
+
+# Updating
+Running the 'update.sh' script will update packages installed via Brew.
+
+It will also install any new packages that have since been defined in Brewfile.
+```bash
+$ ./update.sh
+```

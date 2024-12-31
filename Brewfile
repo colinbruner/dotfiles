@@ -54,8 +54,9 @@ brew 'hashicorp/tap/vault'
 brew 'terragrunt'
 brew 'opentofu'
 
-# K8s
+# k8s
 brew 'kubectl'
+brew 'kustomize'
 brew 'kubectx'
 brew 'k9s'
 brew 'helm'
