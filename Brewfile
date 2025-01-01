@@ -61,9 +61,11 @@ brew 'kubectx'
 tap 'siderolabs/tap'
 brew 'talosctl'
 ## k8s cli
-brew 'argo'
 brew 'k9s'
 brew 'helm'
+## k8s deployed tools
+brew 'argo'
+brew 'cmctl' # Cert Manager CLI
 
 # YAML Tools
 tap 'carvel-dev/carvel'

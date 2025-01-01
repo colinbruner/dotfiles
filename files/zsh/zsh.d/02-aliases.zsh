@@ -12,6 +12,8 @@ alias tmux='tmux -2'
 
 # Laziness Shortcuts
 alias dfs='cd ~/code/colinbruner/dotfiles'
+alias hlb='cd ~/code/colinbruner/homelab'
+alias k8s='cd ~/code/colinbruner/homelab/k8s'
 
 # Alias ipcalc to 'sipcalc' brew installed executable
 alias ipcalc='sipcalc'
@@ -21,6 +23,7 @@ alias k="kubectl"
 alias kg="kubectl get"
 alias kgpo="kubectl get pods"
 alias kcsc="kubectl config set-context --current"
+alias kar="kubectl api-resources"
 
 ## Git
 alias glg1="git log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all"
