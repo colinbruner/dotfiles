@@ -1,6 +1,5 @@
 # Bootstrapping
-# NOTE: This is used in bootstraping dotfiles, I keep it for general server mgmt
-# After initial install, I prefer to keep this within a Python virtualenv
+# NOTE: This is required in bootstraping dotfiles
 brew 'ansible' 
 
 # Install Terminal Utilities
@@ -58,11 +57,13 @@ brew 'opentofu'
 brew 'kubectl'
 brew 'kustomize'
 brew 'kubectx'
-brew 'k9s'
-brew 'helm'
-## K8s Talos
+## k8s Talos
 tap 'siderolabs/tap'
 brew 'talosctl'
+## k8s cli
+brew 'argo'
+brew 'k9s'
+brew 'helm'
 
 # YAML Tools
 tap 'carvel-dev/carvel'
