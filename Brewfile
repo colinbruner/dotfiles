@@ -10,6 +10,10 @@ brew 'tmux'
 brew 'git'
 tap 'neovim/neovim' || true
 brew 'neovim'
+## Containers
+brew 'podman'
+brew 'podman-compose'
+cask 'podman-desktop'
 
 # Install CLI Utilities
 brew 'fd'            # Replacement for file, 'fd' binary
@@ -65,6 +69,7 @@ brew 'k9s'
 brew 'helm'
 ## k8s deployed tools
 brew 'argo'
+brew 'argocd'
 brew 'cmctl' # Cert Manager CLI
 
 # YAML Tools

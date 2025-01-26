@@ -16,6 +16,10 @@ fi
 export PATH="/usr/local/bin:/usr/bin:/bin:/sbin:/usr/sbin"
 export PATH="${PATH}:${USER_BIN}"
 
+###
+# Kubernetes
+###
+
 # Vi mode
 bindkey -v
 bindkey '^R' history-incremental-search-backward

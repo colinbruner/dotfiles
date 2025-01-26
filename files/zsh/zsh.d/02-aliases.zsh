@@ -13,7 +13,7 @@ alias tmux='tmux -2'
 # Laziness Shortcuts
 alias dfs='cd ~/code/colinbruner/dotfiles'
 alias hlb='cd ~/code/colinbruner/homelab'
-alias k8s='cd ~/code/colinbruner/homelab/k8s'
+alias k8s='cd ~/code/colinbruner/homelab-k8s'
 
 # Alias ipcalc to 'sipcalc' brew installed executable
 alias ipcalc='sipcalc'
