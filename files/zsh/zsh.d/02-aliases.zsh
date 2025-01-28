@@ -18,6 +18,9 @@ alias k8s='cd ~/code/colinbruner/homelab-k8s'
 # Alias ipcalc to 'sipcalc' brew installed executable
 alias ipcalc='sipcalc'
 
+# Podman
+alias p="podman"
+
 # Kubernetes
 alias k="kubectl"
 alias kg="kubectl get"
