@@ -25,6 +25,8 @@ brew 'git-crypt'
 
 ## Cloud CLI Utilities
 brew 'awscli'
+brew 'kopia'   # local storage to cloud backups
+#cask 'kopiaui' # local storage to cloud backups UI
 
 # Static Site Generators
 brew 'zola'
