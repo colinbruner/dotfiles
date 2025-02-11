@@ -63,6 +63,7 @@ brew 'opentofu'
 brew 'kubectl'
 brew 'kustomize'
 brew 'kubectx'
+brew 'kubecolor'
 ## k8s Talos
 tap 'siderolabs/tap'
 brew 'talosctl'

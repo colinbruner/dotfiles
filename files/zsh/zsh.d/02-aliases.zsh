@@ -22,11 +22,19 @@ alias ipcalc='sipcalc'
 alias p="podman"
 
 # Kubernetes
-alias k="kubectl"
 alias kg="kubectl get"
 alias kgpo="kubectl get pods"
 alias kcsc="kubectl config set-context --current"
 alias kar="kubectl api-resources"
+
+if command -v kubecolor >/dev/null 2>&1; then
+  alias kubectl=kubecolor
+  alias k=kubecolor
+  compdef kubecolor=kubectl
+else
+  alias kubectl=kubectl
+  alias k=kubectl
+fi
 
 ## Git
 alias glg1="git log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all"
