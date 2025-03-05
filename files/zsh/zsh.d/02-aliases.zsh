@@ -14,6 +14,7 @@ alias tmux='tmux -2'
 alias dfs='cd ~/code/colinbruner/dotfiles'
 alias hlb='cd ~/code/colinbruner/homelab'
 alias k8s='cd ~/code/colinbruner/homelab-k8s'
+alias tform='cd ~/code/colinbruner/terraform-cloud-infra'
 
 # Alias ipcalc to 'sipcalc' brew installed executable
 alias ipcalc='sipcalc'

@@ -70,7 +70,10 @@ brew 'talosctl'
 ## k8s cli
 brew 'k9s'
 brew 'helm'
-## k8s deployed tools
+## k8s development tools
+#brew 'k3d' # NOTE: experimental podman =
+brew 'minikube'
+## k8s deployment tools
 brew 'argo'
 brew 'argocd'
 brew 'cmctl' # Cert Manager CLI

@@ -10,3 +10,7 @@ function awsAuth() {
     export AWS_REGION="us-east-2"
   fi
 }
+
+# I have aliased the 'aws' command to a docker run somewhere.. and I have no idea where.
+# Removing the alias (hopefully) here to reference the real awscli command from PATH.
+unset aliases\[aws\]

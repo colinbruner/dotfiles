@@ -27,3 +27,6 @@
 
     - name: install cloud configurations
       ansible.builtin.include_tasks: tasks/cloud.yml
+
+    - name: install python configurations
+      ansible.builtin.include_tasks: tasks/python.yml

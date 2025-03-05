@@ -1,0 +1,8 @@
+---
+
+- name: install pipx cli executables
+  ansible.builtin.command:
+    cmd: "pipx install {{ item.executable }}"
+    creates: "{{ item.install_path }}"
+  loop:
+    - { executable: "poetry", install_path: "{{ ansible_env.HOME }}/.local/bin/poetry" }
