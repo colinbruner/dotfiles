@@ -50,12 +50,14 @@ brew 'pipx'
 ## Java
 brew 'jenv'
 
-# Hashicorp
-tap 'hashicorp/tap'
+# IAC
+## Pulumi
+brew 'pulumi/tap/pulumi'
+## Hashicorp
 brew 'hashicorp/tap/packer'
 brew 'hashicorp/tap/terraform'
 brew 'hashicorp/tap/vault'
-## Hashicorp Adjacent
+### Hashicorp Adjacent
 brew 'terragrunt'
 brew 'opentofu'
 
